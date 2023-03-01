@@ -6,7 +6,7 @@ import time
 
 import httpx
 
-from googletrans.utils import rshift
+from GoogleTranslater_RoBoT.utils import rshift
 
 
 class TokenAcquirer:
