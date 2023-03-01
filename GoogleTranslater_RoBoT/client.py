@@ -8,23 +8,22 @@ import random
 import typing
 import re
 
-import httpcore
-import httpx
+import httpcore, httpx
 from httpx import Timeout
 
-from googletrans import urls, utils
-from googletrans.gtoken import TokenAcquirer
-from googletrans.constants import (
+from GoogleTranslater_RoBoT import urls, utils
+from GoogleTranslater_RoBoT.gtoken import TokenAcquirer
+from GoogleTranslater_RoBoT.constants import (
     DEFAULT_CLIENT_SERVICE_URLS,
     DEFAULT_USER_AGENT, LANGCODES, LANGUAGES, SPECIAL_CASES,
     DEFAULT_RAISE_EXCEPTION, DUMMY_DATA
 )
-from googletrans.models import Translated, Detected
+from GoogleTranslater_RoBoT.models import Translated, Detected
 
 EXCLUDES = ('en', 'ca', 'fr')
 
 
-class Translator:
+class GoogleTranslater_RoBoT:
     """Google Translate ajax API implementation class
 
     You have to create an instance of Translator to use this API
