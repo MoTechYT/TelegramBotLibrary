@@ -16,14 +16,14 @@ def get_file(*paths):
 
 
 def get_version():
-    init_py = get_file(os.path.dirname(__file__), 'googletrans', '__init__.py')
+    init_py = get_file(os.path.dirname(__file__), 'GoogleTranslater_RoBoT', '__init__.py')
     pattern = r"{0}\W*=\W*'([^']+)'".format('__version__')
     version, = re.findall(pattern, init_py)
     return version
 
 
 def get_description():
-    init_py = get_file(os.path.dirname(__file__), 'googletrans', '__init__.py')
+    init_py = get_file(os.path.dirname(__file__), 'GoogleTranslater_RoBoT', '__init__.py')
     pattern = r'"""(.*?)"""'
     description, = re.findall(pattern, init_py, re.DOTALL)
     return description
@@ -35,7 +35,7 @@ def get_readme():
 
 def install():
     setup(
-        name='googletrans',
+        name='GoogleTranslater_RoBoT',
         version=get_version(),
         description=get_description(),
         long_description=get_readme(),
